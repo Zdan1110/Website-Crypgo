@@ -57,7 +57,7 @@ const Features = () => {
       <div className="container mx-auto px-6 lg:max-w-screen-xl">
         {/* Judul Section */}
         <div className="text-center max-w-lg mx-auto mb-16">
-          <h1 className="text-4xl font-bold mb-2">Why Us!</h1>
+          <h1 className="text-4xl font-bold mb-4">Why Us!</h1>
           <p className="text-primary text-lg sm:text-xl font-medium">
             The Best In The Crypto Industry
           </p>
