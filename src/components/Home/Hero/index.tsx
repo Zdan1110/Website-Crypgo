@@ -53,7 +53,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative md:pt-40 md:pb-28 overflow-hidden z-1"
+      className="relative md:pt-40 md:pb-20 py-10 overflow-hidden z-1"
       id="main-banner"
     >
       <div className="container mx-auto lg:max-w-screen-xl px-4">
@@ -87,24 +87,6 @@ const Hero = () => {
               >
                 Sell Crypto
               </button>
-            </div>
-            <div className="flex items-center md:justify-start justify-center gap-12 mt-20">
-              <Link href="#" className="hover:scale-110 duration-300">
-                <Image
-                  src={`${getImagePrefix()}images/hero/playstore.png`}
-                  alt="Play Store"
-                  width={240}
-                  height={70}
-                />
-              </Link>
-              <Link href="#" className="hover:scale-110 duration-300">
-                <Image
-                  src= {`${getImagePrefix()}images/hero/applestore.png`}
-                  alt="App Store"
-                  width={240}
-                  height={70}
-                />
-              </Link>
             </div>
           </motion.div>
           <motion.div
