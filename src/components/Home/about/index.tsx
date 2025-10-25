@@ -27,7 +27,7 @@ const AboutUs = () => {
               alt="About Us"
               width={500}
               height={500}
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-lg w-64 sm:w-80 md:w-[400px] lg:w-[500px] h-auto"
             />
           </motion.div>
 
@@ -54,7 +54,7 @@ const AboutUs = () => {
             </p>
 
             {/* List poin */}
-            <ul className="space-y-3">
+            <ul className="space-y-5">
               {[
                 "Tempor erat elitr rebum at clita",
                 "Tempor erat elitr rebum at clita",
