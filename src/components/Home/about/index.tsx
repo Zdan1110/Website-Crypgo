@@ -69,7 +69,7 @@ const AboutUs = () => {
               ))}
             </ul>
 
-            <button className="mt-6 bg-primary hover:bg-transparent border border-primary text-darkmode hover:text-primary font-medium rounded-lg py-3 px-6 transition">
+            <button className="mt-10 bg-primary hover:bg-transparent border border-primary text-darkmode hover:text-primary font-medium rounded-lg py-3 px-6 transition">
               Read More
             </button>
           </motion.div>
