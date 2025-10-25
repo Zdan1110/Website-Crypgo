@@ -76,7 +76,7 @@ const Features = () => {
               className="flex items-start"
             >
               <Image
-                src={`${getImagePrefix()}images/icons/${feature.img}`}
+                src={`${getImagePrefix()}${feature.img}`}
                 alt={feature.title}
                 width={60}
                 height={60}
