@@ -53,7 +53,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative md:pt-40 md:pb-20 py-10 overflow-hidden z-1"
+      className="relative md:pt-40 md:pb-16 py-28 overflow-hidden z-1"
       id="main-banner"
     >
       <div className="container mx-auto lg:max-w-screen-xl px-4">
