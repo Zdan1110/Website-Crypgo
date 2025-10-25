@@ -11,7 +11,7 @@ const AboutUs = () => {
   };
 
   return (
-    <section id="about-us" className="py-32 bg-darkmode text-white">
+    <section id="about-us" className="py-28 md:py-32 bg-darkmode text-white">
       <div className="container mx-auto px-6 lg:max-w-screen-xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Gambar */}
@@ -69,7 +69,7 @@ const AboutUs = () => {
               ))}
             </ul>
 
-            <button className="mt-10 bg-primary hover:bg-transparent border border-primary text-darkmode hover:text-primary font-medium rounded-lg py-3 px-6 transition">
+            <button className="mt-14 bg-primary hover:bg-transparent border border-primary text-darkmode hover:text-primary font-medium rounded-lg py-3 px-6 transition">
               Read More
             </button>
           </motion.div>
