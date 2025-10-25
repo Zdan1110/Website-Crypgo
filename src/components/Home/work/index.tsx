@@ -36,7 +36,7 @@ const Work = () => {
   ];
 
   return (
-    <section className="md:pt-28" id="work">
+    <section className="pt-10 md:pt-28" id="work">
       <div className="container mx-auto lg:max-w-screen-xl px-4">
         <div ref={ref} className="grid grid-cols-12 items-center">
           <motion.div
@@ -44,7 +44,7 @@ const Work = () => {
             className="lg:col-span-7 col-span-12"
           >
             <p className="sm:text-28 text-18 text-white">
-              Work withs <span className="text-primary">us</span>
+              Work with <span className="text-primary">us</span>
             </p>
             <h2 className="sm:text-40 text-30 text-white lg:w-full md:w-70% font-medium">
               Successfully launch your blockchain project.
