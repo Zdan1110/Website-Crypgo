@@ -83,8 +83,8 @@ const Features = () => {
                 className="flex-shrink-0"
               />
               <div className="pl-4">
-                <h5 className="text-xl font-semibold mb-2">{feature.title}</h5>
-                <p className="text-gray-300 text-sm">{feature.desc}</p>
+                <h5 className="text-xl font-semibold mb-4">{feature.title}</h5>
+                <p className="text-gray-300 text-sm md:text-lg">{feature.desc}</p>
               </div>
             </motion.div>
           ))}
