@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import BuyCrypto from "./buy-form";
 import SellCrypto from "./sell-form";
-import CardSlider from "./slider";
 import { useEffect, useRef, useState, useCallback } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { getImagePrefix } from "@/utils/utils";
@@ -54,7 +53,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative md:pt-40 md:pb-28 py-20 overflow-hidden z-1"
+      className="relative md:pt-40 md:pb-28 overflow-hidden z-1"
       id="main-banner"
     >
       <div className="container mx-auto lg:max-w-screen-xl px-4">
@@ -112,7 +111,7 @@ const Hero = () => {
             {...rightAnimation}
             className="col-span-7 lg:block hidden"
           >
-            <div className="ml-20 -mr-64">
+            <div className="ml-10 -mr-64">
               <Image
                 src= {`${getImagePrefix()}images/hero/banner-image.png`}
                 alt="Banner"
@@ -122,7 +121,6 @@ const Hero = () => {
             </div>
           </motion.div>
         </div>
-        <CardSlider />
       </div>
       <div className="absolute w-50 h-50 bg-gradient-to-bl from-tealGreen from-50% to-charcoalGray to-60% blur-400 rounded-full -top-64 -right-14 -z-1"></div>
 
