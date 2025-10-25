@@ -101,6 +101,13 @@ export const portfolioData: { image: string; title: string }[] = [
   },
 ];
 
+export const aboutData: { image: string; title: string }[] = [
+  {
+    image: "/images/about/about.png",
+    title: "About Us",
+  },
+];
+
 export const upgradeData: { title: string }[] = [
   { title: "100% Secure" },
   { title: "A Fraction of the Cost" },
