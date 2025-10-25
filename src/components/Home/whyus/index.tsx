@@ -5,37 +5,37 @@ import { getImagePrefix } from "@/utils/utils";
 
 const featuresData = [
   {
-    img: "icon-1.png",
+    img: "/images/whyus/icon-1.png",
     title: "Easy To Start",
     desc: "Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo.",
     delay: 0.1,
   },
   {
-    img: "icon-2.png",
+    img: "/images/whyus/icon-2.png",
     title: "Safe & Secure",
     desc: "Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo.",
     delay: 0.3,
   },
   {
-    img: "icon-3.png",
+    img: "/images/whyus/icon-3.png",
     title: "Affordable Plans",
     desc: "Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo.",
     delay: 0.5,
   },
   {
-    img: "icon-4.png",
+    img: "/images/whyus/icon-4.png",
     title: "Secure Storage",
     desc: "Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo.",
     delay: 0.1,
   },
   {
-    img: "icon-5.png",
+    img: "/images/whyus/icon-5.png",
     title: "Protected By Insurance",
     desc: "Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo.",
     delay: 0.3,
   },
   {
-    img: "icon-6.png",
+    img: "/images/whyus/icon-6.png",
     title: "24/7 Support",
     desc: "Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo.",
     delay: 0.5,
