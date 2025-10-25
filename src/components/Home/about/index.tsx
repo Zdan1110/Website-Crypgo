@@ -11,7 +11,7 @@ const AboutUs = () => {
   };
 
   return (
-    <section id="about-us" className="py-28 md:py-32 bg-darkmode text-white">
+    <section id="about-us" className="py-28 bg-darkmode text-white">
       <div className="container mx-auto px-6 lg:max-w-screen-xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Gambar */}
@@ -39,10 +39,12 @@ const AboutUs = () => {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h1 className="text-4xl font-bold mb-2">About Us</h1>
-            <p className="text-primary text-xl font-medium">
-              The Most Trusted Cryptocurrency Platform
-            </p>
+            <div className="text-center md:text-left">
+                <h1 className="text-3xl sm:text-4xl font-bold mb-2">About Us</h1>
+                <p className="text-primary text-lg sm:text-xl font-medium">
+                The Most Trusted Cryptocurrency Platform
+                </p>
+            </div>
             <p className="text-gray-300">
               Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
               diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
