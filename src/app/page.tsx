@@ -5,6 +5,7 @@ import TimeLine from "@/components/Home/timeline";
 import Platform from "@/components/Home/platform";
 import Portfolio from "@/components/Home/portfolio";
 import AboutUs from "@/components/Home/about";
+import WhyUs from "@/components/Home/whyus";
 import Upgrade from "@/components/Home/upgrade";
 import Perks from "@/components/Home/perks";
 import { Metadata } from "next";
@@ -18,6 +19,7 @@ export default function Home() {
       <Hero />
       <AboutUs />
       <Work />
+      <WhyUs />
       <TimeLine />
       <Platform />
       <Portfolio />
