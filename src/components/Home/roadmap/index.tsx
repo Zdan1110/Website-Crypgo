@@ -52,7 +52,7 @@ export default function Roadmap() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mt-10"
+          className="mt-20"
         >
           <div className="relative">
             <Swiper
