@@ -73,14 +73,8 @@ const Services = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="relative bg-section bg-opacity-10 p-8 rounded-2xl border-2 border-opacity-20 border-section shadow-lg hover:shadow-2xl transition duration-300"
+              className="bg-section bg-opacity-10 p-8 rounded-2xl border-2 border-opacity-20 border-section shadow-lg hover:shadow-2xl transition duration-300"
             >
-            <div className="absolute top-0 right-0 w-16 h-16 pointer-events-none">
-                <div
-                    className="absolute top-0 right-0 w-16 h-16 bg-white/10 transform rotate-45 origin-center shadow-sm transition-opacity duration-300 group-hover:opacity-0"
-                    style={{ transformOrigin: "100% 0%" }}
-                />
-            </div>
               <Image
                 src={`${getImagePrefix()}images/whyus/${service.img}`}
                 alt={service.title}
