@@ -7,11 +7,11 @@ import { Navigation } from "swiper/modules";
 import { useRef } from "react";
 
 const roadmapData = [
-  { date: "November 2045", desc: "Diam dolor ipsum sit amet erat ipsum lorem sit" },
   { date: "January 2045", desc: "Diam dolor ipsum sit amet erat ipsum lorem sit" },
   { date: "March 2045", desc: "Diam dolor ipsum sit amet erat ipsum lorem sit" },
   { date: "May 2045", desc: "Diam dolor ipsum sit amet erat ipsum lorem sit" },
   { date: "July 2045", desc: "Diam dolor ipsum sit amet erat ipsum lorem sit" },
+  { date: "September 2045", desc: "Diam dolor ipsum sit amet erat ipsum lorem sit" },
 ];
 
 const fadeIn = {
@@ -28,7 +28,7 @@ export default function Roadmap() {
   const nextRef = useRef(null);
 
   return (
-    <section id="roadmap" className="bg-darkmode py-30 text-center text-white">
+    <section id="roadmap" className="bg-darkmode py-28 text-center text-white">
       <div className="container mx-auto px-6 md:max-w-7xl">
         {/* Judul Section */}
         <motion.div
@@ -69,7 +69,7 @@ export default function Roadmap() {
                 swiper.navigation.update();
               }}
               slidesPerView={1.5}
-              spaceBetween={40}
+              spaceBetween={60}
               breakpoints={{
                 640: { slidesPerView: 2.5 },
                 1024: { slidesPerView: 4 },
@@ -78,30 +78,26 @@ export default function Roadmap() {
             >
               {roadmapData.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className="relative pt-4">
+                  <div className="relative flex flex-col items-center">
                     {/* Garis horizontal */}
                     {index !== roadmapData.length - 1 && (
-                        <div
-                            className="absolute top-[-10px] left-1/2 border-t border-dashed border-gray-400"
-                            style={{
-                                width: "calc(100% - 1rem)",
-                                transform: "translateX(0.625rem)",
-                            }}
-                        ></div>
+                      <div className="absolute top-2 left-1/2 w-full h-px border-t border-dashed border-gray-400 transform -translate-x-1/2 z-0"></div>
                     )}
 
                     {/* Diamond besar */}
-                    <div className="relative mx-auto w-5 h-5 rotate-45 border-4 border-sky-400 bg-white z-10"></div>
+                    <div className="relative z-10 w-5 h-5 rotate-45 border-4 border-sky-400 bg-white"></div>
 
                     {/* Garis vertikal */}
-                    <div className="w-px h-10 border-l border-dashed border-gray-400 mx-auto"></div>
+                    <div className="w-px h-10 border-l border-dashed border-gray-400"></div>
 
                     {/* Diamond kecil */}
-                    <div className="w-3 h-3 rotate-45 bg-sky-400 mx-auto mb-6"></div>
+                    <div className="w-3 h-3 rotate-45 bg-sky-400 mb-6"></div>
 
                     {/* Teks */}
                     <h3 className="text-lg font-bold mb-2 text-white">{item.date}</h3>
-                    <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                    <p className="text-gray-400 text-sm leading-relaxed max-w-[200px] mx-auto">
+                      {item.desc}
+                    </p>
                   </div>
                 </SwiperSlide>
               ))}
