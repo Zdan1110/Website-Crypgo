@@ -57,7 +57,7 @@ const Services = () => {
       <div className="container mx-auto px-6 lg:max-w-screen-xl">
         {/* Judul Section */}
         <div className="text-center max-w-lg mx-auto mb-16">
-          <h1 className="text-4xl font-bold mb-2">Services</h1>
+          <h1 className="text-4xl font-bold mb-4">Services</h1>
           <p className="text-primary text-lg sm:text-xl font-medium">
             Buy, Sell And Exchange Cryptocurrency
           </p>
@@ -73,8 +73,9 @@ const Services = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="bg-section bg-opacity-10 p-8 rounded-2xl border-2 border-opacity-20 border-section shadow-lg hover:shadow-2xl transition duration-300"
+              className="relative bg-section bg-opacity-10 p-8 rounded-2xl border-2 border-opacity-20 border-section shadow-lg hover:shadow-2xl transition duration-300"
             >
+            <div className="absolute top-0 right-0 w-0 h-0 border-t-[80px] border-l-[80px] border-transparent border-t-[#f1f9ff] transition-all duration-300 group-hover:border-t-transparent group-hover:border-l-transparent"></div>
               <Image
                 src={`${getImagePrefix()}images/whyus/${service.img}`}
                 alt={service.title}
