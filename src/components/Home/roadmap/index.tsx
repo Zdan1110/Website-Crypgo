@@ -52,7 +52,6 @@ export default function Roadmap() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="pt-10"
         >
           <div className="relative">
             <Swiper
@@ -82,7 +81,13 @@ export default function Roadmap() {
                   <div className="relative pt-4">
                     {/* Garis horizontal */}
                     {index !== roadmapData.length - 1 && (
-                      <div className="absolute top-5 left-1/2 w-full border-t border-dashed border-gray-400"></div>
+                        <div
+                            className="absolute top-[10px] left-1/2 border-t border-dashed border-gray-400"
+                            style={{
+                                width: "calc(100% - 1.25rem)",
+                                transform: "translateX(0.625rem)",
+                            }}
+                        ></div>
                     )}
 
                     {/* Diamond besar */}
