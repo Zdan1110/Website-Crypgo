@@ -2,17 +2,16 @@
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
-import { FreeMode, Pagination } from "swiper/modules";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
+import { useRef } from "react";
 
 const roadmapData = [
+  { date: "November 2045", desc: "Diam dolor ipsum sit amet erat ipsum lorem sit" },
   { date: "January 2045", desc: "Diam dolor ipsum sit amet erat ipsum lorem sit" },
   { date: "March 2045", desc: "Diam dolor ipsum sit amet erat ipsum lorem sit" },
   { date: "May 2045", desc: "Diam dolor ipsum sit amet erat ipsum lorem sit" },
   { date: "July 2045", desc: "Diam dolor ipsum sit amet erat ipsum lorem sit" },
-  { date: "September 2045", desc: "Diam dolor ipsum sit amet erat ipsum lorem sit" },
-  { date: "November 2045", desc: "Diam dolor ipsum sit amet erat ipsum lorem sit" },
 ];
 
 const fadeIn = {
@@ -25,9 +24,12 @@ const fadeIn = {
 };
 
 export default function Roadmap() {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
   return (
-    <section id="roadmap" className="bg-darkmode py-32 text-white">
-      <div className="container mx-auto px-6 lg:max-w-screen-xl">
+    <section id="roadmap" className="bg-white py-24 text-center text-gray-800">
+      <div className="container mx-auto px-6 lg:max-w-6xl">
         {/* Judul Section */}
         <motion.div
           variants={fadeIn}
@@ -35,15 +37,15 @@ export default function Roadmap() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-center max-w-lg mx-auto mb-16"
+          className="mb-16"
         >
-          <h1 className="text-4xl font-bold mb-4">Roadmap</h1>
-          <p className="text-primary text-lg sm:text-xl font-medium">
+          <h1 className="text-4xl font-bold mb-3 text-black">Roadmap</h1>
+          <p className="text-sky-400 text-lg sm:text-xl font-medium">
             We Translate Your Dream Into Reality
           </p>
         </motion.div>
 
-        {/* Swiper Roadmap */}
+        {/* Swiper Timeline */}
         <motion.div
           variants={fadeIn}
           custom={0.2}
@@ -51,28 +53,70 @@ export default function Roadmap() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <Swiper
-            slidesPerView={1.2}
-            spaceBetween={24}
-            freeMode={true}
-            pagination={{ clickable: true }}
-            modules={[FreeMode, Pagination]}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-            className="roadmap-swiper pb-10"
-          >
-            {roadmapData.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className="relative bg-section bg-opacity-10 p-8 rounded-2xl border border-section/30 shadow-lg transition duration-300 hover:shadow-2xl text-center">
-                  <div className="w-4 h-4 bg-primary rounded-full mx-auto mb-4"></div>
-                  <h5 className="text-xl font-semibold mb-2">{item.date}</h5>
-                  <p className="text-gray-300 text-sm">{item.desc}</p>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <div className="relative">
+            <Swiper
+              modules={[Navigation]}
+              navigation={{
+                prevEl: prevRef.current,
+                nextEl: nextRef.current,
+              }}
+              onInit={(swiper) => {
+                // @ts-ignore
+                swiper.params.navigation.prevEl = prevRef.current;
+                // @ts-ignore
+                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.navigation.init();
+                swiper.navigation.update();
+              }}
+              slidesPerView={1.5}
+              spaceBetween={40}
+              breakpoints={{
+                640: { slidesPerView: 2.5 },
+                1024: { slidesPerView: 4 },
+              }}
+              className="pb-12"
+            >
+              {roadmapData.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className="relative">
+                    {/* Garis horizontal */}
+                    {index !== roadmapData.length - 1 && (
+                      <div className="absolute top-5 left-1/2 w-full border-t border-dashed border-gray-400"></div>
+                    )}
+
+                    {/* Diamond besar */}
+                    <div className="relative mx-auto w-5 h-5 rotate-45 border-4 border-sky-400 bg-white z-10"></div>
+
+                    {/* Garis vertikal */}
+                    <div className="w-px h-10 border-l border-dashed border-gray-400 mx-auto"></div>
+
+                    {/* Diamond kecil */}
+                    <div className="w-3 h-3 rotate-45 bg-sky-400 mx-auto mb-6"></div>
+
+                    {/* Teks */}
+                    <h3 className="text-lg font-bold mb-2 text-black">{item.date}</h3>
+                    <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
+            {/* Tombol Navigasi */}
+            <div className="flex justify-center gap-4 mt-8">
+              <button
+                ref={prevRef}
+                className="w-10 h-10 rounded-full bg-sky-400 text-white flex items-center justify-center hover:bg-sky-500 transition"
+              >
+                ‹
+              </button>
+              <button
+                ref={nextRef}
+                className="w-10 h-10 rounded-full bg-sky-400 text-white flex items-center justify-center hover:bg-sky-500 transition"
+              >
+                ›
+              </button>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
