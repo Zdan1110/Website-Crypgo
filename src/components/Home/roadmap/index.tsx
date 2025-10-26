@@ -29,7 +29,7 @@ export default function Roadmap() {
 
   return (
     <section id="roadmap" className="bg-darkmode py-30 text-center text-white">
-      <div className="container mx-auto px-6 lg:max-w-6xl">
+      <div className="container mx-auto px-6 md:max-w-7xl">
         {/* Judul Section */}
         <motion.div
           variants={fadeIn}
