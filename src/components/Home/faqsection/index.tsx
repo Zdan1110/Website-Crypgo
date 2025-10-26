@@ -70,7 +70,7 @@ export default function FaqSection() {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-md mx-auto mb-12">
-          <h1 className="text-4xl font-bold mb-2">FAQs</h1>
+          <h1 className="text-4xl font-bold mb-2">FAQ</h1>
           <p className="text-sky-600 text-lg font-medium">
             Frequently Asked Questions
           </p>

@@ -8,7 +8,7 @@ import AboutUs from "@/components/Home/about";
 import WhyUs from "@/components/Home/whyus";
 import Services from "@/components/Home/services";
 import Roadmap from "@/components/Home/roadmap";
-import FaqSection from "@/components/Home/faqsection";
+import FaqSections from "@/components/Home/faqsection";
 import Upgrade from "@/components/Home/upgrade";
 import Perks from "@/components/Home/perks";
 import { Metadata } from "next";
@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <FaqSection />
+      <FaqSections />
       <AboutUs />
       <Work />
       <WhyUs />
