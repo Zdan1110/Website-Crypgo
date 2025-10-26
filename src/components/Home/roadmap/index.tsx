@@ -81,7 +81,7 @@ export default function Roadmap() {
                   <div className="relative flex flex-col items-center mt-4">
                     {/* Garis horizontal */}
                     {index !== roadmapData.length - 1 && (
-                      <div className="absolute top-3.5 left-1/2 w-full h-px border-t border-dashed border-gray-400 transform -translate-x-1/2 z-0"></div>
+                      <div className="absolute top-3 left-1/2 w-full h-px border-t border-dashed border-gray-400 transform -translate-x-1/2 z-0"></div>
                     )}
 
                     {/* Diamond besar */}
