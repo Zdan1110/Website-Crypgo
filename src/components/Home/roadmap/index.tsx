@@ -30,8 +30,6 @@ export default function Roadmap() {
   return (
     <section id="roadmap" className="bg-darkmode py-28 text-center text-white relative overflow-hidden">
       <div className="container mx-auto px-6 md:max-w-7xl relative">
-        {/* Garis Horizontal Utama (di belakang semua diamond) */}
-        <div className="absolute top-[72px] left-0 w-full border-t border-dashed border-gray-500 z-0"></div>
 
         {/* Judul Section */}
         <motion.div
@@ -83,6 +81,8 @@ export default function Roadmap() {
               {roadmapData.map((item, index) => (
                 <SwiperSlide key={index}>
                   <div className="relative flex flex-col items-center mt-4">
+                    {/* Garis Horizontal Utama (di belakang semua diamond) */}
+                    <div className="absolute top-[72px] left-0 w-full border-t border-dashed border-gray-500 z-0"></div>
                     {/* Diamond besar */}
                     <div className="w-5 h-5 rotate-45 border-4 border-sky-400 bg-white z-10"></div>
 
