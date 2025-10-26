@@ -53,7 +53,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="bg-gray-100 py-32 my-10 text-darkmode">
+    <section id="services" className="bg-darkmode py-32 my-10 text-white">
       <div className="container mx-auto px-6 lg:max-w-screen-xl">
         {/* Judul Section */}
         <div className="text-center max-w-lg mx-auto mb-16">
