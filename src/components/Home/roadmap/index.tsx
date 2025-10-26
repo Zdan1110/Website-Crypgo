@@ -28,7 +28,7 @@ export default function Roadmap() {
   const nextRef = useRef(null);
 
   return (
-    <section id="roadmap" className="bg-white py-24 text-center text-gray-800">
+    <section id="roadmap" className="bg-darkmode py-30 text-center text-white">
       <div className="container mx-auto px-6 lg:max-w-6xl">
         {/* Judul Section */}
         <motion.div
