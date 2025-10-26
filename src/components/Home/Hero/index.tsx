@@ -67,7 +67,7 @@ const Hero = () => {
                 height={40}
               />
               <p className="text-white sm:text-28 text-18 mb-0">
-                Crypto On The <span className="text-primary">Go</span>
+                Crypto On The <span className="text-primary">Go Coba</span>
               </p>
             </div>
             <h1 className="font-medium lg:text-76 md:text-70 text-54 lg:text-start text-center text-white mb-10">
