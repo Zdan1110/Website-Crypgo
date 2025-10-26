@@ -28,8 +28,11 @@ export default function Roadmap() {
   const nextRef = useRef(null);
 
   return (
-    <section id="roadmap" className="bg-darkmode py-28 text-center text-white">
-      <div className="container mx-auto px-6 md:max-w-7xl">
+    <section id="roadmap" className="bg-darkmode py-28 text-center text-white relative overflow-hidden">
+      <div className="container mx-auto px-6 md:max-w-7xl relative">
+        {/* Garis Horizontal Utama (di belakang semua diamond) */}
+        <div className="absolute top-[72px] left-0 w-full border-t border-dashed border-gray-500 z-0"></div>
+
         {/* Judul Section */}
         <motion.div
           variants={fadeIn}
@@ -37,7 +40,7 @@ export default function Roadmap() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-16 relative z-10"
         >
           <h1 className="text-4xl font-bold mb-3 text-white">Roadmap</h1>
           <p className="text-sky-400 text-lg sm:text-xl font-medium">
@@ -52,6 +55,7 @@ export default function Roadmap() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+          className="relative z-10"
         >
           <div className="relative">
             <Swiper
@@ -79,13 +83,8 @@ export default function Roadmap() {
               {roadmapData.map((item, index) => (
                 <SwiperSlide key={index}>
                   <div className="relative flex flex-col items-center mt-4">
-                    {/* Garis horizontal */}
-                    {index !== roadmapData.length - 1 && (
-                      <div className="absolute top-3 left-1/2 w-full h-px border-t border-dashed border-gray-400 transform -translate-x-1/2 z-0"></div>
-                    )}
-
                     {/* Diamond besar */}
-                    <div className="relative z-10 w-5 h-5 rotate-45 border-4 border-sky-400 bg-white"></div>
+                    <div className="w-5 h-5 rotate-45 border-4 border-sky-400 bg-white z-10"></div>
 
                     {/* Garis vertikal */}
                     <div className="w-px h-10 border-l border-dashed border-gray-400"></div>
