@@ -53,7 +53,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="bg-darkmode py-32 my-10 text-white">
+    <section id="services" className="bg-darkmode py-32 text-white">
       <div className="container mx-auto px-6 lg:max-w-screen-xl">
         {/* Judul Section */}
         <div className="text-center max-w-lg mx-auto mb-16">
@@ -73,7 +73,7 @@ const Services = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300"
+              className="bg-section bg-opacity-10 p-8 rounded-2xl border-2 border-opacity-20 border-section shadow-lg hover:shadow-2xl transition duration-300"
             >
               <Image
                 src={`${getImagePrefix()}images/whyus/${service.img}`}
@@ -82,8 +82,8 @@ const Services = () => {
                 height={70}
                 className="mb-6"
               />
-              <h5 className="text-xl font-semibold mb-3">{service.title}</h5>
-              <p className="text-gray-500 mb-4 text-sm">{service.desc}</p>
+              <h5 className="text-xl text-white font-semibold mb-3">{service.title}</h5>
+              <p className="text-gray-300 mb-4 text-sm">{service.desc}</p>
               <a
                 href="#"
                 className="text-primary font-medium inline-flex items-center hover:underline"
