@@ -1,7 +1,3 @@
-"use client";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { getImagePrefix } from "@/utils/utils";
 import { useState } from "react";
 
 const faqs = [
