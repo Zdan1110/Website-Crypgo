@@ -31,7 +31,7 @@ export default function Roadmap() {
     <section id="roadmap" className="bg-darkmode py-28 text-center text-white relative overflow-hidden">
       <div className="container mx-auto px-6 md:max-w-7xl relative">
         {/* Garis Horizontal Utama (di belakang semua diamond) */}
-        <div className="absolute top-[10.75rem] left-0 w-full border-t border-dashed border-gray-500 z-0"></div>
+        <div className="absolute top-[10.6rem] left-0 w-[90%] border-t border-dashed border-gray-500 z-0"></div>
 
         {/* Judul Section */}
         <motion.div
