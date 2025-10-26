@@ -39,7 +39,7 @@ export default function Roadmap() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h1 className="text-4xl font-bold mb-3 text-black">Roadmap</h1>
+          <h1 className="text-4xl font-bold mb-3 text-white">Roadmap</h1>
           <p className="text-sky-400 text-lg sm:text-xl font-medium">
             We Translate Your Dream Into Reality
           </p>
@@ -74,7 +74,7 @@ export default function Roadmap() {
                 640: { slidesPerView: 2.5 },
                 1024: { slidesPerView: 4 },
               }}
-              className="pb-12"
+              className="pb-4"
             >
               {roadmapData.map((item, index) => (
                 <SwiperSlide key={index}>
@@ -94,7 +94,7 @@ export default function Roadmap() {
                     <div className="w-3 h-3 rotate-45 bg-sky-400 mx-auto mb-6"></div>
 
                     {/* Teks */}
-                    <h3 className="text-lg font-bold mb-2 text-black">{item.date}</h3>
+                    <h3 className="text-lg font-bold mb-2 text-white">{item.date}</h3>
                     <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </SwiperSlide>
