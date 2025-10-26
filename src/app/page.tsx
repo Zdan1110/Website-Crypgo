@@ -20,7 +20,6 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <FaqSections />
       <AboutUs />
       <Work />
       <WhyUs />
@@ -31,6 +30,7 @@ export default function Home() {
       <Portfolio />
       <Upgrade />
       <Perks />
+      <FaqSections />
     </main>
   );
 }

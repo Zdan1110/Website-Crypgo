@@ -66,12 +66,12 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-20 bg-white text-gray-900">
+    <section id="faq" className="py-20 bg-darkmode text-white">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-md mx-auto mb-12">
           <h1 className="text-4xl font-bold mb-2">FAQ</h1>
-          <p className="text-sky-600 text-lg font-medium">
+          <p className="text-primary text-lg font-medium">
             Frequently Asked Questions
           </p>
         </div>
@@ -81,7 +81,7 @@ export default function FaqSection() {
           {faqs.map((item, index) => (
             <div
               key={index}
-              className="border border-gray-300 rounded-lg overflow-hidden shadow-sm transition-all duration-300"
+              className="border-2 border-opacity-20 border-section rounded-lg overflow-hidden shadow-sm transition-all duration-300"
               style={{
                 animation: `fadeInUp 0.4s ease ${item.delay}s forwards`,
                 opacity: 0,
@@ -91,7 +91,7 @@ export default function FaqSection() {
             >
               <button
                 className={`w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-lg transition-colors ${
-                  openIndex === index ? "bg-sky-600 text-white" : "bg-gray-50 hover:bg-gray-100"
+                  openIndex === index ? "bg-green-300 text-darkmode" : "bg-section bg-opacity-10 hover:bg-opacity-50 text-primary"
                 }`}
                 onClick={() => toggle(index)}
               >
@@ -109,7 +109,7 @@ export default function FaqSection() {
                   openIndex === index ? "max-h-40" : "max-h-0"
                 }`}
               >
-                <div className="px-6 py-4 bg-white text-gray-600 border-t border-gray-200">
+                <div className="px-6 py-4 bg-section bg-opacity-10 text-gray-400 border-t border-section border-opacity-50">
                   {item.answer}
                 </div>
               </div>

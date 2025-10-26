@@ -31,7 +31,7 @@ export default function Roadmap() {
     <section id="roadmap" className="bg-darkmode py-28 text-center text-white relative overflow-hidden">
       <div className="container mx-auto px-6 md:max-w-7xl relative">
         {/* Garis Horizontal Utama (di belakang semua diamond) */}
-        <div className="absolute top-[10.6rem] left-8 w-full border-t border-dashed border-gray-500 z-0"></div>
+        <div className="absolute top-[10.6rem] left-0 w-full border-t border-dashed border-gray-500 z-0"></div>
 
         {/* Judul Section */}
         <motion.div
@@ -43,7 +43,7 @@ export default function Roadmap() {
           className="mb-16 relative z-10"
         >
           <h1 className="text-4xl font-bold mb-3 text-white">Roadmap</h1>
-          <p className="text-sky-400 text-lg sm:text-xl font-medium">
+          <p className="text-primary text-lg sm:text-xl font-medium">
             We Translate Your Dream Into Reality
           </p>
         </motion.div>
@@ -84,13 +84,13 @@ export default function Roadmap() {
                 <SwiperSlide key={index}>
                   <div className="relative flex flex-col items-center mt-4">
                     {/* Diamond besar */}
-                    <div className="w-5 h-5 rotate-45 border-4 border-sky-400 bg-white z-10"></div>
+                    <div className="w-5 h-5 rotate-45 border-4 border-primary bg-white z-10"></div>
 
                     {/* Garis vertikal */}
                     <div className="w-px h-10 border-l border-dashed border-gray-400"></div>
 
                     {/* Diamond kecil */}
-                    <div className="w-3 h-3 rotate-45 bg-sky-400 mb-6"></div>
+                    <div className="w-3 h-3 rotate-45 bg-primary mb-6"></div>
 
                     {/* Teks */}
                     <h3 className="text-lg font-bold mb-2 text-white">{item.date}</h3>
@@ -106,13 +106,13 @@ export default function Roadmap() {
             <div className="flex justify-center gap-4 mt-12">
               <button
                 ref={prevRef}
-                className="w-10 h-10 rounded-full bg-sky-400 text-white flex items-center justify-center hover:bg-sky-500 transition"
+                className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-sky-500 transition"
               >
                 ‹
               </button>
               <button
                 ref={nextRef}
-                className="w-10 h-10 rounded-full bg-sky-400 text-white flex items-center justify-center hover:bg-sky-500 transition"
+                className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-sky-500 transition"
               >
                 ›
               </button>
