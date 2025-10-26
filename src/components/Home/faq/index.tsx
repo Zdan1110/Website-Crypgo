@@ -1,66 +1,101 @@
+"use client";
 import { useState } from "react";
 
-const faqs = [
+type FAQItem = {
+  question: string;
+  answer: string;
+  delay?: number;
+};
+
+const faqs: FAQItem[] = [
   {
     question: "How to build a website?",
     answer:
       "Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.",
+    delay: 0.1,
   },
   {
     question: "How long will it take to get a new website?",
     answer:
       "Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.",
+    delay: 0.2,
   },
   {
     question: "Do you only create HTML websites?",
     answer:
       "Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.",
+    delay: 0.3,
   },
   {
     question: "Will my website be mobile-friendly?",
     answer:
       "Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.",
+    delay: 0.4,
   },
   {
     question: "Will you maintain my site for me?",
     answer:
       "Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.",
+    delay: 0.5,
   },
   {
     question: "I’m on a strict budget. Do you have any low cost options?",
     answer:
       "Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.",
+    delay: 0.6,
+  },
+  {
+    question: "Will you maintain my site for me?",
+    answer:
+      "Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.",
+    delay: 0.7,
+  },
+  {
+    question: "I’m on a strict budget. Do you have any low cost options?",
+    answer:
+      "Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.",
+    delay: 0.8,
   },
 ];
 
-const FaqSection = () => {
+export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const toggleFAQ = (index: number) => {
+  const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section id="faq" className="py-24 bg-darkmode text-white">
-      <div className="max-w-5xl mx-auto px-4">
+    <section id="faq" className="py-20 bg-white text-gray-900">
+      <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">FAQs</h1>
-          <p className="text-green-600 text-lg">Frequently Asked Questions</p>
+        <div className="text-center max-w-md mx-auto mb-12">
+          <h1 className="text-4xl font-bold mb-2">FAQs</h1>
+          <p className="text-sky-600 text-lg font-medium">
+            Frequently Asked Questions
+          </p>
         </div>
 
         {/* Accordion */}
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
+        <div className="max-w-4xl mx-auto space-y-4">
+          {faqs.map((item, index) => (
             <div
               key={index}
-              className="border border-gray-300 rounded-lg overflow-hidden shadow-sm"
+              className="border border-gray-300 rounded-lg overflow-hidden shadow-sm transition-all duration-300"
+              style={{
+                animation: `fadeInUp 0.4s ease ${item.delay}s forwards`,
+                opacity: 0,
+                transform: "translateY(20px)",
+                animationFillMode: "forwards",
+              }}
             >
               <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-medium text-gray-800 bg-gray-50 hover:bg-gray-100 transition"
+                className={`w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-lg transition-colors ${
+                  openIndex === index ? "bg-sky-600 text-white" : "bg-gray-50 hover:bg-gray-100"
+                }`}
+                onClick={() => toggle(index)}
               >
-                {faq.question}
+                {item.question}
                 <span
                   className={`transform transition-transform ${
                     openIndex === index ? "rotate-180" : ""
@@ -69,17 +104,33 @@ const FaqSection = () => {
                   ▼
                 </span>
               </button>
-              {openIndex === index && (
-                <div className="px-6 py-4 text-gray-600 bg-white border-t border-gray-200">
-                  {faq.answer}
+              <div
+                className={`transition-all overflow-hidden duration-500 ${
+                  openIndex === index ? "max-h-40" : "max-h-0"
+                }`}
+              >
+                <div className="px-6 py-4 bg-white text-gray-600 border-t border-gray-200">
+                  {item.answer}
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Simple animation mimic of wow.js */}
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </section>
   );
-};
-
-export default FaqSection;
+}
