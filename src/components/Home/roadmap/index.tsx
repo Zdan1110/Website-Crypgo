@@ -52,7 +52,7 @@ export default function Roadmap() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mt-20"
+          className="pt-10"
         >
           <div className="relative">
             <Swiper
@@ -79,7 +79,7 @@ export default function Roadmap() {
             >
               {roadmapData.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className="relative">
+                  <div className="relative pt-4">
                     {/* Garis horizontal */}
                     {index !== roadmapData.length - 1 && (
                       <div className="absolute top-5 left-1/2 w-full border-t border-dashed border-gray-400"></div>
