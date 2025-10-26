@@ -31,7 +31,7 @@ export default function Roadmap() {
     <section id="roadmap" className="bg-darkmode py-28 text-center text-white relative overflow-hidden">
       <div className="container mx-auto px-6 md:max-w-7xl relative">
         {/* Garis Horizontal Utama (di belakang semua diamond) */}
-        <div className="absolute top-[10.6rem] left-0 w-[90%] border-t border-dashed border-gray-500 z-0"></div>
+        <div className="absolute top-[10.6rem] left-0 w-full border-t border-dashed border-gray-500 z-0"></div>
 
         {/* Judul Section */}
         <motion.div
@@ -103,7 +103,7 @@ export default function Roadmap() {
             </Swiper>
 
             {/* Tombol Navigasi */}
-            <div className="flex justify-center gap-4 mt-8">
+            <div className="flex justify-center gap-4 mt-12">
               <button
                 ref={prevRef}
                 className="w-10 h-10 rounded-full bg-sky-400 text-white flex items-center justify-center hover:bg-sky-500 transition"
