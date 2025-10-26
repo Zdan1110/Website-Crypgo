@@ -82,7 +82,7 @@ export default function Roadmap() {
                     {/* Garis horizontal */}
                     {index !== roadmapData.length - 1 && (
                         <div
-                            className="absolute top-[8px] left-1/2 border-t border-dashed border-gray-400"
+                            className="absolute top-[-10px] left-1/2 border-t border-dashed border-gray-400"
                             style={{
                                 width: "calc(100% - 1rem)",
                                 transform: "translateX(0.625rem)",
